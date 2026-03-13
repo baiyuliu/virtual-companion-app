@@ -1,5 +1,4 @@
 // lib/core/models/chat_message.dart
-import 'package:hive_flutter/hive_flutter.dart';
 
 enum MessageRole { user, assistant }
 

@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import '../../core/utils/memory_manager.dart';
-import '../../core/utils/elderly_language.dart';
 import '../reminder/reminder_screen.dart';
 
 class SettingsScreen extends StatelessWidget {

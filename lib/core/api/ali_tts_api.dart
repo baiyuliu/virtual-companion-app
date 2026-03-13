@@ -2,17 +2,12 @@
 // 阿里云 CosyVoice TTS + 声音克隆
 
 import 'dart:async';
-import 'dart:convert';
-import 'dart:io';
 import 'dart:typed_data';
 import 'package:dio/dio.dart';
-import 'package:web_socket_channel/web_socket_channel.dart';
-import 'package:uuid/uuid.dart';
 import '../utils/constants.dart';
 
 class AliTtsApi {
   final Dio _dio = Dio();
-  final _uuid = const Uuid();
 
   // ─── 声音克隆：上传录音 → 获取 voice_id ──────────────────────
   /// 上传15-30秒音频，返回克隆声音ID

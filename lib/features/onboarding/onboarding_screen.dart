@@ -8,7 +8,6 @@ import 'package:uuid/uuid.dart';
 import '../../core/api/ali_tts_api.dart';
 import '../../core/api/soul_avatar_api.dart';
 import '../../core/models/avatar_model.dart';
-import '../../core/models/user_profile.dart';
 import '../../core/services/recording_service.dart';
 import '../../core/utils/elderly_language.dart';
 import '../../core/utils/memory_manager.dart';

@@ -274,7 +274,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                             color: (_isRecording
                                     ? Colors.red
                                     : const Color(0xFF7B8B6F))
-                                .withOpacity(0.4),
+                                .withValues(alpha: 0.4),
                             blurRadius: 20,
                             spreadRadius: 4,
                           ),
@@ -337,7 +337,7 @@ class _MessageBubble extends StatelessWidget {
           ),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.06),
+              color: Colors.black.withValues(alpha: 0.06),
               blurRadius: 6,
               offset: const Offset(0, 2),
             ),

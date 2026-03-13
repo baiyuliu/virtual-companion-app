@@ -1,7 +1,6 @@
 // lib/core/utils/memory_manager.dart
 // 三层本地记忆系统: 短期 / 中期 / 长期
 
-import 'dart:convert';
 import 'package:hive_flutter/hive_flutter.dart';
 import '../models/chat_message.dart';
 import 'constants.dart';

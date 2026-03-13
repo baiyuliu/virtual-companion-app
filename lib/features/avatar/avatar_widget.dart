@@ -51,8 +51,8 @@ class _AvatarWidgetState extends State<AvatarWidget>
               height: 180 + _breatheCtrl.value * 20,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: const Color(0xFF7B8B6F).withOpacity(
-                    0.08 + _breatheCtrl.value * 0.06),
+                color: const Color(0xFF7B8B6F).withValues(
+                    alpha: 0.08 + _breatheCtrl.value * 0.06),
               ),
             ),
           ),
@@ -119,7 +119,7 @@ class _PhotoAvatar extends StatelessWidget {
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.15),
+            color: Colors.black.withValues(alpha: 0.15),
             blurRadius: 20,
           ),
         ],

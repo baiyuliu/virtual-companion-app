@@ -174,7 +174,7 @@ class _ReminderCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(14),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -213,7 +213,7 @@ class _ReminderCard extends StatelessWidget {
           ),
           CupertinoSwitch(
             value: reminder.enabled,
-            activeColor: const Color(0xFF7B8B6F),
+            activeTrackColor: const Color(0xFF7B8B6F),
             onChanged: onToggle,
           ),
         ],
