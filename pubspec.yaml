@@ -16,7 +16,7 @@ dependencies:
   riverpod_annotation: ^2.3.5
 
   # 录音
-  record: ^5.1.0
+  record: ^6.0.0
 
   # 音频播放
   just_audio: ^0.9.40
