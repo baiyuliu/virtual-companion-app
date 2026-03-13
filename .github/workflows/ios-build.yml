@@ -19,11 +19,29 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      - name: Build iOS (no code signing)
-        run: flutter build ios --release --no-codesign
+      - name: Build iOS frameworks
+        run: flutter build ios-framework --no-profile
+
+      - name: Build with xcodebuild (no signing)
+        run: |
+          cd ios
+          pod install
+          xcodebuild build \
+            -workspace Runner.xcworkspace \
+            -scheme Runner \
+            -configuration Debug \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            DEVELOPMENT_TEAM="" \
+            -derivedDataPath ../build/derivedData
 
       - name: Archive unsigned .app
-        run: zip -r Runner.app.zip build/ios/iphoneos/Runner.app
+        run: |
+          APP_PATH=$(find build/derivedData -name "Runner.app" -type d | head -1)
+          zip -r Runner.app.zip "$APP_PATH"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
